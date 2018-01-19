@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/taxsdk_icon_warning"
+        android:visibility="gone"
+        app:backgroundTint="@color/TaxSdkColor_ffeb3b"
+        app:borderWidth="0dp"
+        app:rippleColor="@color/TaxSdkColor_e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/taxsdk_certificates_type"
+                android:textColor="@color/TaxSdkColor_Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:background="@color/TaxSdkColor_null"
+                android:drawableRight="@mipmap/taxsdk_icon_arrow_bottom"
+                android:textColor="@color/TaxSdkColor_aeaeae"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:id="@+id/view_type"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height=" 0.5dp"-->
+        <!--android:layout_marginLeft=" 17dp"-->
+        <!--android:background="@color/color_cccccc" />-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+        <View
+            android:id="@+id/view_verification"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="17dp"
+            android:background="@color/TaxSdkColor_Line"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_verification"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/taxsdk_code"
+                android:textColor="@color/TaxSdkColor_Black" />
+
+            <EditText
+                android:id="@+id/editText_verification"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="1"
+                android:background="@color/TaxSdkColor_null"
+                android:hint="@string/taxsdk_input_code"
+                android:singleLine="true"
+                android:textColorHint="@color/TaxSdkColor_aeaeae"
+                android:textSize="15sp" />
+
+            <FrameLayout
+                android:id="@+id/fl_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="87dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitXY" />
+
+               <!-- <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/code_loading"
+                    android:layout_width=" 30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:indicator="BallSpinFadeLoader"
+                    app:indicator_color="@color/color_loading" />-->
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/TaxSdkColor_Line" />
+
+        <TextView
+            android:id="@+id/tv_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:text="找回密码"
+            android:textColor="@color/TaxSdkColor_Primary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:theme="@style/TaxSdkCheckBox"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/textView_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taxsdk_data_parsing_service_protocol"
+                android:textColor="@color/TaxSdkColor_Gray_999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/taxsdk_btn_selector"
+            android:enabled="false"
+            android:text="@string/taxsdk_login"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_register_tax"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/taxsdk_button_white_background_shape"
+            android:text="没有账户，立即注册"
+            android:textColor="@color/TaxSdkColor_Primary"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_authorization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进入sdk前进行授权" />
+
+    <Button
+        android:id="@+id/btn_goLit_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进入sdk默认当前城市" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_city_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="城市名称"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_city_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="城市id"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_goLit_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进入sdk指定城市" />
+
+
+</LinearLayout>

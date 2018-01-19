@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:paddingBottom="30dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="方式一  使用支付宝获得"
+        android:textColor="@color/TaxSdkColor_Black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_way_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="您自己持身份证火委托他人携带您自己和代办人的身份证原件和复印件，委托书办税服务厅申请办理注册码，然后使用注册码在办税网站注册。"
+        android:textColor="@color/TaxSdkColor_Gray_999999"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_first_row_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_way_des"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_first_row_left"
+                android:layout_width="114dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/taxsdk_shape_rounded_rectangle_white_primary"
+                android:gravity="center"
+                android:text="忘记密码"
+                android:textColor="@color/TaxSdkColor_Primary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_first_row_right"
+                android:layout_width="114dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/taxsdk_shape_rounded_rectangle_white_primary"
+                android:gravity="center"
+                android:text="操作指南"
+                android:textColor="@color/TaxSdkColor_Primary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_second_row_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_first_row_btns"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_second_row_left"
+                android:layout_width="114dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/taxsdk_shape_rounded_rectangle_white_primary"
+                android:gravity="center"
+                android:text="忘记密码"
+                android:textColor="@color/TaxSdkColor_Primary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_second_row_right"
+                android:layout_width="114dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/taxsdk_shape_rounded_rectangle_white_primary"
+                android:gravity="center"
+                android:text="操作指南"
+                android:textColor="@color/TaxSdkColor_Primary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/tv_title"
+        android:background="@color/TaxSdkColor_Line" />
+</RelativeLayout>

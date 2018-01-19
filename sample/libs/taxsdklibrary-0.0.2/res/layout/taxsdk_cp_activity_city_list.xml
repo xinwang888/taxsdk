@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/TaxSdkColor_Background"
+    android:orientation="vertical">
+
+    <include layout="@layout/taxsdk_app_toolbar"/>
+
+    <include layout="@layout/taxsdk_cp_view_search" />
+
+    <RelativeLayout
+        android:id="@+id/rl_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ListView
+            android:scrollbars="none"
+            android:id="@+id/listview_all_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/TaxSdkColor_Divider"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_letter_overlay"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.igeshui.sdk.tax.view.SideLetterBar
+            android:id="@+id/side_letter_bar"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="29dp"
+            tools:ignore="RtlHardcoded" />
+
+        <ListView
+            android:paddingRight="15dp"
+            android:id="@+id/listview_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/TaxSdkColor_Divider"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone" />
+
+        <include layout="@layout/taxsdk_cp_view_no_search_result" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_reoption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="重新选择"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

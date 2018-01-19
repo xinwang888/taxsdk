@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@drawable/taxsdk_shape_rectangle_white_gray"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/TaxSdkColor_Black"
+            android:visibility="gone"
+            tools:text="@string/taxsdk_account" />
+
+        <TextView
+            android:id="@+id/tv_constants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/TaxSdkColor_null"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColorHint="@color/TaxSdkColor_aeaeae"
+            android:textSize="15sp"
+            tools:hint="@string/taxsdk_user_phone_email" />
+    </LinearLayout>
+</LinearLayout>

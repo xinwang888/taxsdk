@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="TaxSdkColor_Background">#e9e9e9</color>
+    <color name="TaxSdkColor_Black">#333333</color>
+    <color name="TaxSdkColor_Divider">#e5e5e5</color>
+    <color name="TaxSdkColor_Gray_999999">#999999</color>
+    <color name="TaxSdkColor_Line">#cacaca</color>
+    <color name="TaxSdkColor_Primary">#06CFC5</color>
+    <color name="TaxSdkColor_Stroke">#cccccc</color>
+    <color name="TaxSdkColor_aeaeae">#aeaeae</color>
+    <color name="TaxSdkColor_card_shadow">#10000000</color>
+    <color name="TaxSdkColor_e0e0e0">#e0e0e0</color>
+    <color name="TaxSdkColor_ffeb3b">#ffeb3b</color>
+    <color name="TaxSdkColor_null">#00000000</color>
+    <color name="TaxSdkColor_red">#f43f6e</color>
+    <dimen name="taxsdk_action_button_height">32dp</dimen>
+    <dimen name="taxsdk_action_button_min_width">56dp</dimen>
+    <dimen name="taxsdk_action_button_padding_horizontal">4dp</dimen>
+    <dimen name="taxsdk_action_button_text_size">14sp</dimen>
+    <dimen name="taxsdk_side_letter_bar_letter_size">13sp</dimen>
+    <string name="taxsdk_account">账户</string>
+    <string name="taxsdk_certificates_type">证件类型</string>
+    <string name="taxsdk_code">验证码</string>
+    <string name="taxsdk_cp_hint_search_box">请输入城市名称</string>
+    <string name="taxsdk_data_parsing_service_protocol">我同意《数据解析服务协议》</string>
+    <string name="taxsdk_input_code">请输入验证码</string>
+    <string name="taxsdk_login">登录</string>
+    <string name="taxsdk_submit">提交</string>
+    <string name="taxsdk_user_phone_email">用户名/手机号码/电子邮箱</string>
+    <style name="TaxSdkActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/taxsdk_action_button_height</item>
+        <item name="android:minWidth">@dimen/taxsdk_action_button_min_width</item>
+        <item name="android:paddingLeft">@dimen/taxsdk_action_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/taxsdk_action_button_padding_horizontal</item>
+        <item name="android:background">@drawable/taxsdk_button</item>
+        <item name="android:textSize">@dimen/taxsdk_action_button_text_size</item>
+    </style>
+    <style name="TaxSdkCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/TaxSdkColor_Gray_999999</item>
+        <item name="colorControlActivated">@color/TaxSdkColor_Primary</item>
+    </style>
+    <style name="TaxSdkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+    </style>
+</resources>

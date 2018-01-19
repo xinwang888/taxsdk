@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/TaxSdkColor_Line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <LinearLayout
+        android:id="@+id/ll_code"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_code_lable"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/taxsdk_code"
+            android:textColor="@color/TaxSdkColor_Black" />
+
+        <EditText
+            android:id="@+id/et_code_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/TaxSdkColor_null"
+            android:hint="@string/taxsdk_input_code"
+            android:singleLine="true"
+            android:textColorHint="@color/TaxSdkColor_aeaeae"
+            android:textSize="15sp" />
+
+        <FrameLayout
+            android:id="@+id/fl_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_code"
+                android:layout_width="87dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <ProgressBar
+                android:id="@+id/pb_code"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/TaxSdkColor_Background"
+    android:orientation="vertical">
+
+    <include layout="@layout/taxsdk_app_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_yzmTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fbfecf"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/TaxSdkColor_red"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/TaxSdkColor_Line" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:text="@string/taxsdk_certificates_type"
+            android:textColor="@color/TaxSdkColor_Black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/TaxSdkColor_null"
+            android:drawableRight="@mipmap/taxsdk_icon_arrow_bottom"
+            android:textColor="@color/TaxSdkColor_aeaeae"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_verification"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/taxsdk_code"
+            android:textColor="@color/TaxSdkColor_Black" />
+
+        <EditText
+            android:id="@+id/editText_verification"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/TaxSdkColor_null"
+            android:hint="@string/taxsdk_input_code"
+            android:singleLine="true"
+            android:textColorHint="@color/TaxSdkColor_aeaeae"
+            android:textSize="15sp" />
+
+        <FrameLayout
+            android:id="@+id/fl_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_code"
+                android:layout_width="87dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY" />
+
+            <ProgressBar
+                android:id="@+id/pb_code"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!--    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/TaxSdkColor_Line" />-->
+
+    <TextView
+        android:id="@+id/tv_formTipBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/taxsdk_data_parsing_service_protocol"
+        android:textColor="@color/TaxSdkColor_Gray_999999"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/taxsdk_btn_selector"
+        android:enabled="false"
+        android:text="@string/taxsdk_submit"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
