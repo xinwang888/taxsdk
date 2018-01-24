@@ -57,7 +57,7 @@ dependencies {
 //    compile project(':taxsdklibrary')
 //    compile(name:'taxsdklibrary-0.0.2',ext:'aar')
 //    compile 'com.igeshui.sdk.tax:taxsdklibrary:0.0.2'
-    compile ("com.igeshui.sdk.tax:taxsdklibrary:0.0.6", {
+    compile ("com.igeshui.sdk.tax:taxsdklibrary:0.0.9", {
         exclude group: "com.android.support"
     })
 }

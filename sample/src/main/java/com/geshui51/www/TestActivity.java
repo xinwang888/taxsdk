@@ -1,6 +1,5 @@
 package com.geshui51.www;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +8,6 @@ import android.widget.Toast;
 
 
 import com.igeshui.sdk.tax.AuthorizationCallback;
-import com.igeshui.sdk.tax.ui.TaxAccountListActivity;
-import com.igeshui.sdk.tax.ui.login.TaxLoginActivity;
 import com.igeshui.sdk.tax.TaxLib;
 
 
@@ -31,7 +28,7 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //2sdk授权
-                TaxLib.getInstance().authorization("XW0201020000015544", "123", new AuthorizationCallback() {
+                TaxLib.getInstance().authorization("XW0201020000070000", "123", new AuthorizationCallback() {
                     @Override
                     public void success() {
                         Toast.makeText(TestActivity.this, "授权成功", Toast.LENGTH_SHORT).show();
@@ -49,7 +46,8 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //3进入当前城市
-                startActivity(new Intent(TestActivity.this, TaxLoginActivity.class));
+                TaxLib.getInstance().enterTaxSDK(TestActivity.this, null, null);
+//                startActivity(new Intent(TestActivity.this, TaxLoginActivity.class));
             }
         });
 
@@ -61,24 +59,24 @@ public class TestActivity extends AppCompatActivity {
 
                 if (isEmpty(cityName) || isEmpty(cityId)) {
                     showToast("城市名称或城市ID为空进入当前城市");
-                    return;
                 }
+
+                TaxLib.getInstance().enterTaxSDK(TestActivity.this, cityName, cityId);
                 //3进入指定城市
-                startActivity(new Intent(TestActivity.this, TaxLoginActivity.class)
-                        .putExtra("City", cityName)
-                        .putExtra("CityId", cityId));
+//                startActivity(new Intent(TestActivity.this, TaxLoginActivity.class)
+//                        .putExtra("City", cityName)
+//                        .putExtra("CityId", cityId));
             }
         });
 
 
-
     }
 
-    public  boolean isEmpty(String result) {
+    public boolean isEmpty(String result) {
         return result == null || "".equals(result.trim());
     }
 
-    private void showToast(String msg){
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
+    private void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
